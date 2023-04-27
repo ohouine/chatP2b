@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -13,17 +13,17 @@
         <h1>Connexion</h1>
     </header>
     <main id="connect">
-        <span class="error"><small><?= $errorConnexion ?></small></span>
+        <span class="error"><small></small></span>
         <form action="#" method="post" id="connectForm">
             <div>
                 <label for="user">Nom d'utilisateur</label>
-                <span class="error"><?= $errorUser ?></span>
-                <input type="text" name="user" id="user" value="<?= $user ?>">
+                <span class="error"></span>
+                <input type="text" name="user" id="user" value="">
             </div>
 
             <div>
                 <label for="password">Mot de passe</label>
-                <span class="error"><?= $errorPassword ?></span>
+                <span class="error"></span>
                 <input type="password" name="password" id="password">
             </div>
 
@@ -36,30 +36,30 @@
     <main id="create">
         <form action="#" method="post" id="connectForm">
             
-            <span><?= $errorExist ?></span>
+            <span></span>
         
             <div>
                 <label for="user">Nom d'utilisateur <small>20 max</small></label>
-                <span class="error"><?= $errorUser ?></span>
-                <input type="text" name="user" id="user" value="<?= $user ?>">
+                <span class="error"></span>
+                <input type="text" name="user" id="user" value="">
             </div>
 
             <div>
                 <label for="mail">E-mail</label>
-                <span class="error"><?= $errorMail ?></span>
-                <input type="mail" name="mail" id="mail" value="<?= $mail ?>">
+                <span class="error"></span>
+                <input type="mail" name="mail" id="mail" value="">
             </div>
 
 
             <div>
                 <label for="password">Mot de passe</label>
-                <span class="error"><?= $errorPassword ?></span>
+                <span class="error">></span>
                 <input type="password" name="password" id="password">
             </div>
 
             <div>
                 <label for="secPassword">confirmé votre mot de passe</label>
-                <span class="error"><?= $errorSecPassword ?></span>
+                <span class="error"></span>
                 <input type="password" name="secPassword" id="secPassword">
             </div>
 
