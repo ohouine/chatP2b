@@ -78,6 +78,22 @@ console.log(cross)
 profilPhoto.addEventListener('click',() => hiddenDiv.style.display = 'flex')
 // @ts-ignore
 cross.addEventListener('click',() => hiddenDiv.style.display = 'none')
-     -->
+    -->
+
+    <!--
+        <div id="hiddenImageDiv" class="divImg">
+                <div id="crossDiv"><div id='cross'></div></div> 
+                <?php
+                    foreach ($ownedImage as $i => $value) {
+                        $imgType = exeSingleSelect('SELECT `TYPE` FROM  `IMAGE` WHERE IMG = :img',[':img' => $value['OWN_IMAGE']]);
+
+                        if ($imgType['TYPE'] == 'icone') {
+                            
+                            echo '<a href="changePhoto.php?img='.$value['OWN_IMAGE'].'"><img src="../../img/'.$value['OWN_IMAGE'].'" alt="image de profil"></a>';
+                        }
+                    }
+                ?>
+            </div>
+    -->
 </body>
 </html>
