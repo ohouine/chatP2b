@@ -50,6 +50,14 @@ body{
 
 }
 
+.other {
+
+    left: 300px;
+    top: 200px;
+    position: absolute;
+
+}
+
 #loginPage {
 
     display: none;
