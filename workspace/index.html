@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="fr">
-=======
-<html lang="en">
->>>>>>> d993045f8c37fb9af0b7f16bd80de7c311f99691
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <link rel="stylesheet" href="./css/styleHube.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Hube</title>
 </head>
 <body>
-    <header>
-        <h1>Hube de la classe P2B</h1>
+    <section id="hubPage">
+        <header id="hubHeader">
+        <h1 id="titreHub">Hube de la classe P2B</h1>
+        <a href="#" id="loginLinkFhub">Login</a>
     </header>
-    <main>
-        <input type="image" src="./image/Madotsuki-dragonne.png" id="me">
+    <main id="hub">
+        <input type="image" src="./image/12.png" id="me">
+        <input type="image" src="./image/16.png" class="other" id="ohoiune">
     </main>
+    </section>
+    
+
+    <section id="loginPage">
+        <main id="connect">
+            <div id="divConnect">
+                <header>
+                <div id="back"><a href="#"><img src="./image/flecheGriffeLong.png" alt="fleche de retour"></a></div>
+                <h1>Connexion</h1>
+                </header>
+    
+                <div id="connectMainDiv">
+                    <span class="error"><small></small></span>
+                    <form action="#" method="post" id="connectForm">
+                        <div>
+                            <label for="user">Nom d'utilisateur</label>
+                            <span class="error"></span>
+                            <input type="text" name="user" id="user" value="">
+                        </div>
+    
+                        <div>
+                            <label for="password">Mot de passe</label>
+                            <span class="error"></span>
+                            <input type="password" name="password" id="password">
+                        </div>
+    
+    
+                        <input type="submit" value="Se connecter">
+                        <a href="#" id="createLink">Crée un compte</a>
+                    </form>
+                </div> 
+                   
+            </div>
+           
+            
+        </main>
+    
+        <main id="createAccount" style="display: none;">
+            <div id="divCreateAcc">
+                <header>
+                    <div id="back"><a href="#"><img src="./image/flecheGriffeLong.png" alt="fleche de retour"></a></div>
+                    <h1>Connexion</h1>
+                </header>
+                <form action="#" method="post" id="connectForm">
+                        
+                    <span></span>
+                        
+                    <div>
+                        <label for="user">Nom d'utilisateur <small>20 max</small></label>
+                        <span class="error"></span>
+                        <input type="text" name="user" id="user" value="">
+                    </div>
+    
+                    <div>
+                        <label for="mail">E-mail</label>
+                        <span class="error"></span>
+                        <input type="mail" name="mail" id="mail" value="">
+                    </div>
+    
+    
+                    <div>
+                        <label for="password">Mot de passe</label>
+                        <span class="error"></span>
+                        <input type="password" name="password" id="password">
+                    </div>
+    
+                    <div>
+                        <label for="secPassword">confirmé votre mot de passe</label>
+                        <span class="error"></span>
+                        <input type="password" name="secPassword" id="secPassword">
+                    </div>
+    
+                    <div id="divImgCreate">
+                        <img src="./image/5.png" alt="img morgana" id="currentImg">
+                    </div>
+    
+                        <section id="hiddenImageDiv" class="divImg">
+                        <div id="crossDiv"><span id='cross'></span></div> 
+                             
+                        </section>
+                    
+    
+                    <input type="submit" value="Cree un compte">
+    
+    
+                    <a href="#" id="loginLink">j'ai dejas un compte</a>
+                </form>
+            </div>
+            
+        </main>
+    </section>
 
     <script src="./script/move.js"></script>
-=======
-    <title></title>
-</head>
-<body>
-    
->>>>>>> d993045f8c37fb9af0b7f16bd80de7c311f99691
+    <script src="./script/changePage.js"></script>
+    <script src="./script/nav.js"></script>
+    <script src="./script/changeIMG.js"></script>
 </body>
 </html>
