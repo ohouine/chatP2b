@@ -23,7 +23,7 @@ section input{
 }
 
 #convDiv{
-    overflow-y: hidden;
+    overflow-y: scroll;
     height: 80%;
 }
 
