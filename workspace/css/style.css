@@ -56,6 +56,11 @@ body{
     margin-bottom: 1rem;
 }
 
+#divCreateAcc header h1{
+    width: 100%;
+    text-align: center;
+}
+
 #userImage_div{
     width: 100%;
     display: flex;
@@ -70,7 +75,30 @@ body{
     margin-top: 2rem;
 }
 
+#createAccount{
+    height: 100%;
+}
 
+#divCreateAcc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#divCreateAcc a{
+    margin-top: 1rem;
+}
+
+#divCreateAcc form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    background-color: rgb(37,37,37,80%);
+    height: 25rem;
+}
 
 #userImage_div img{
     width: 7rem;
@@ -93,6 +121,10 @@ body{
     position: absolute;
     left: 170px;
     top: 60px;
+}
+
+#divImgCreate img{
+    height: 4rem;
 }
 
 #hiddenImageDiv{
@@ -119,8 +151,7 @@ body{
 }
 
 .divImg img{
-    width:5rem !important;
-    height: 5rem;
+    height: 7rem;
     margin: 0.2rem;
 }
 

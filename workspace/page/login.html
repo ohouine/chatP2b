@@ -43,67 +43,59 @@
     </main>
 
     <main id="createAccount" style="display: none;">
-        <form action="#" method="post" id="connectForm">
-            
-            <span></span>
+        <div id="divCreateAcc">
+            <header>
+                <div id="back"><a href="#"><img src="../image/flecheGriffeLong.png" alt="fleche de retour"></a></div>
+                <h1>Connexion</h1>
+            </header>
+            <form action="#" method="post" id="connectForm">
+                    
+                <span></span>
+                    
+                <div>
+                    <label for="user">Nom d'utilisateur <small>20 max</small></label>
+                    <span class="error"></span>
+                    <input type="text" name="user" id="user" value="">
+                </div>
+
+                <div>
+                    <label for="mail">E-mail</label>
+                    <span class="error"></span>
+                    <input type="mail" name="mail" id="mail" value="">
+                </div>
+
+
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <span class="error"></span>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div>
+                    <label for="secPassword">confirmé votre mot de passe</label>
+                    <span class="error"></span>
+                    <input type="password" name="secPassword" id="secPassword">
+                </div>
+
+                <div id="divImgCreate">
+                    <img src="../image/5.png" alt="img morgana" id="currentImg">
+                </div>
+
+                    <section id="hiddenImageDiv" class="divImg">
+                    <div id="crossDiv"><span id='cross'></span></div> 
+                         
+                    </section>
+                
+
+                <input type="submit" value="Cree un compte">
+
+
+                <a href="#" id="loginLink">j'ai dejas un compte</a>
+            </form>
+        </div>
         
-            <div>
-                <label for="user">Nom d'utilisateur <small>20 max</small></label>
-                <span class="error"></span>
-                <input type="text" name="user" id="user" value="">
-            </div>
-
-            <div>
-                <label for="mail">E-mail</label>
-                <span class="error"></span>
-                <input type="mail" name="mail" id="mail" value="">
-            </div>
-
-
-            <div>
-                <label for="password">Mot de passe</label>
-                <span class="error">></span>
-                <input type="password" name="password" id="password">
-            </div>
-
-            <div>
-                <label for="secPassword">confirmé votre mot de passe</label>
-                <span class="error"></span>
-                <input type="password" name="secPassword" id="secPassword">
-            </div>
-
-
-            <input type="submit" value="Se connecter">
-        </form>
     </main>
-    <!-- 
-        //@ts-check
-let profilPhoto = document.getElementById('clickable');
-let hiddenDiv = document.getElementById('hiddenImageDiv');
-let cross = document.getElementById('cross');
-
-console.log(cross)
-// @ts-ignore
-profilPhoto.addEventListener('click',() => hiddenDiv.style.display = 'flex')
-// @ts-ignore
-cross.addEventListener('click',() => hiddenDiv.style.display = 'none')
-    -->
-
-    <!--
-        <div id="hiddenImageDiv" class="divImg">
-                <div id="crossDiv"><div id='cross'></div></div> 
-                <?php
-                    foreach ($ownedImage as $i => $value) {
-                        $imgType = exeSingleSelect('SELECT `TYPE` FROM  `IMAGE` WHERE IMG = :img',[':img' => $value['OWN_IMAGE']]);
-
-                        if ($imgType['TYPE'] == 'icone') {
-                            
-                            echo '<a href="changePhoto.php?img='.$value['OWN_IMAGE'].'"><img src="../../img/'.$value['OWN_IMAGE'].'" alt="image de profil"></a>';
-                        }
-                    }
-                ?>
-            </div>
-    -->
     <script src="../script/changePage.js"></script>
+    <script src="../script/changeIMG.js"></script>
 </body>
 </html>
