@@ -4,62 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Connexion</title>
 </head>
 <body>
-    <header>
-        <div id="back"><a href="../../index.php"><img src="../../img/flecheGriffeLong.png" alt="fleche de retour"></a></div>
-        <h1>Connexion</h1>
-    </header>
+    
     <main id="connect">
-        <span class="error"><small><?= $errorConnexion ?></small></span>
-        <form action="#" method="post" id="connectForm">
-            <div>
-                <label for="user">Nom d'utilisateur</label>
-                <span class="error"><?= $errorUser ?></span>
-                <input type="text" name="user" id="user" value="<?= $user ?>">
-            </div>
+        <div id="divConnect">
+            <header>
+            <div id="back"><a href="#"><img src="../image/flecheGriffeLong.png" alt="fleche de retour"></a></div>
+            <h1>Connexion</h1>
+            </header>
 
-            <div>
-                <label for="password">Mot de passe</label>
-                <span class="error"><?= $errorPassword ?></span>
-                <input type="password" name="password" id="password">
-            </div>
+            <div id="connectMainDiv">
+                <span class="error"><small></small></span>
+                <form action="#" method="post" id="connectForm">
+                    <div>
+                        <label for="user">Nom d'utilisateur</label>
+                        <span class="error"></span>
+                        <input type="text" name="user" id="user" value="">
+                    </div>
+
+                    <div>
+                        <label for="password">Mot de passe</label>
+                        <span class="error"></span>
+                        <input type="password" name="password" id="password">
+                    </div>
 
 
-            <input type="submit" value="Se connecter">
-        </form>
-        <a href="createAcount.php?first=true">Crée un compte</a>
+                    <input type="submit" value="Se connecter">
+                    <a href="#" id="createLink">Crée un compte</a>
+                </form>
+            </div> 
+               
+        </div>
+       
+        
     </main>
 
-    <main id="create" style="display: none;">
+    <main id="createAccount" style="display: none;">
         <form action="#" method="post" id="connectForm">
             
-            <span><?= $errorExist ?></span>
+            <span></span>
         
             <div>
                 <label for="user">Nom d'utilisateur <small>20 max</small></label>
-                <span class="error"><?= $errorUser ?></span>
-                <input type="text" name="user" id="user" value="<?= $user ?>">
+                <span class="error"></span>
+                <input type="text" name="user" id="user" value="">
             </div>
 
             <div>
                 <label for="mail">E-mail</label>
-                <span class="error"><?= $errorMail ?></span>
-                <input type="mail" name="mail" id="mail" value="<?= $mail ?>">
+                <span class="error"></span>
+                <input type="mail" name="mail" id="mail" value="">
             </div>
 
 
             <div>
                 <label for="password">Mot de passe</label>
-                <span class="error"><?= $errorPassword ?></span>
+                <span class="error">></span>
                 <input type="password" name="password" id="password">
             </div>
 
             <div>
                 <label for="secPassword">confirmé votre mot de passe</label>
-                <span class="error"><?= $errorSecPassword ?></span>
+                <span class="error"></span>
                 <input type="password" name="secPassword" id="secPassword">
             </div>
 
@@ -95,5 +104,6 @@ cross.addEventListener('click',() => hiddenDiv.style.display = 'none')
                 ?>
             </div>
     -->
+    <script src="../script/changePage.js"></script>
 </body>
 </html>
