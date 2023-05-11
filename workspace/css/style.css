@@ -1,5 +1,5 @@
 /* Connect */
-body{
+#loginPage{
     background-image: url(../image/background-login.jpg);
     background-size: cover;
     margin: 0px;

@@ -6,7 +6,7 @@
  
  for (let i = 1; i <= 37; i++) {
     let img = document.createElement("img")
-    img.src = `../image/${i}.png`
+    img.src = `./image/${i}.png`
     img.classList.add("selecImg")
     hiddenDiv?.appendChild(img)
 }
@@ -21,8 +21,7 @@ for (let i = 0; i < lstImg.length; i++) {
     })
 }
 
- console.log(currentImg)
  // @ts-ignore
- currentImg.addEventListener('click',() => {hiddenDiv.style.display = 'flex'; console.log("c bon")})
+ currentImg.addEventListener('click',() => {hiddenDiv.style.display = 'flex'})
  // @ts-ignore
  cross.addEventListener('click',() => hiddenDiv.style.display = 'none')

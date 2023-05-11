@@ -1,8 +1,7 @@
 let allMess = document.querySelectorAll('p')
-
+console.log(allMess)
 for (let i = 0; i < allMess.length; i++) {
 
-    console.log(allMess[i].className)
 
     if (allMess[i].className === "send") {
         allMess[i].style.float = "right"

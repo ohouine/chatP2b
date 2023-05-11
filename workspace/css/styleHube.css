@@ -1,9 +1,13 @@
-body {
-
-    height: 99vh;
-    width: 99vw;
+body{
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
+}
+
+#hubPage{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,10 +17,49 @@ body {
 
 }
 
-main {
+#hubHeader {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+#titreHub {
+
+    color: white;
+
+}
+
+#loginLinkFhub {
+
+    color: white;
+
+}
+
+#hub {
 
     height: 50rem;
     width: 80rem;
     background-color: gray;
+
+}
+
+#me {
+
+    position: absolute;
+
+}
+
+.other {
+
+    left: 300px;
+    top: 200px;
+    position: absolute;
+
+}
+
+#loginPage {
+
+    display: none;
 
 }

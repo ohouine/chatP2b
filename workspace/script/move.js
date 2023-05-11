@@ -1,24 +1,88 @@
 let me = document.getElementById("me");
+let other = document.querySelector("other");
+let hub = document.getElementById("hub");
 
-me.addEventListener("onkeydown", (event) => {
+let position = hub.getBoundingClientRect();
 
-    switch(event.keyCode){
+let haut = position.top;
+let left = position.left;
 
-        case (40):
-            me.style.top ++;
-            break;
+window.addEventListener("keydown", (event) => {
 
-        case (38):
-            me.style.bottom ++;
-            break;
+    switch(event.key){
 
-        case (37):
-            me.style.left ++;
-            break;
+        case "ArrowUp":
 
-        case (39):
-            me.style.right ++;
-            break;
+            haut -= 10;
+            
+            if(position.top < haut){
+
+                me.style.top = haut + "px";
+
+            }
+            else{
+
+                haut = position.top
+                me.style.top = haut + "px";
+
+            }
+
+        break;
+
+        case "ArrowDown":
+
+            haut += 10;
+
+            if(position.bottom - me.getBoundingClientRect().height > haut){
+
+                me.style.top = haut + "px";
+
+            }
+            else{
+
+                haut = position.bottom - me.getBoundingClientRect().height;
+                me.style.top = haut + "px";
+
+            }
+
+        break;
+
+        case "ArrowLeft":
+
+            left -= 10;
+
+            if(position.left < left){
+
+                me.style.left = left + "px";
+
+            }
+            else{
+
+                left = position.left;
+                me.style.left = left + "px";
+
+            }
+
+        break;
+
+        case "ArrowRight":
+
+            left += 10;
+
+            if(position.right - me.getBoundingClientRect().width > left){
+
+                me.style.left = left + "px";
+
+            }
+            else{
+
+                left = position.right - me.getBoundingClientRect().width;
+                me.style.left = left + "px";
+
+            }
+
+
+        break;
 
     }
 
