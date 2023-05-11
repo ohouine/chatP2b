@@ -1,4 +1,4 @@
-section{
+#secConv{
     width: 40rem;
     height: 40rem;
     background-color: rgb(12, 12, 12,70%);
@@ -9,12 +9,12 @@ section{
     border-radius: 10px;
 }
 
-section h1{
+#secConv h1{
     width: 100%;
     border-bottom:solid 1px black ;
 }
 
-section input{
+#secConv input{
     width: 70%;
     height: 2rem;
     position: absolute;

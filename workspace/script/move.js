@@ -1,11 +1,35 @@
 let me = document.getElementById("me");
-let other = document.querySelector("other");
+let other = document.querySelectorAll(".other");
 let hub = document.getElementById("hub");
+let secConv = document.getElementById("secConv")
 
 let position = hub.getBoundingClientRect();
+let positionMe = me.getBoundingClientRect();
 
 let haut = position.top;
-let left = position.left;
+let gauche = position.left;
+
+let centreY = (haut - positionMe.height / 2) + (positionMe.width / 2);
+let centreX = (gauche + positionMe.width / 2) + (positionMe.height / 2);
+
+setInterval(() => {
+
+    other.forEach(element => {
+
+        let otherPosition = element.getBoundingClientRect();
+    
+        let centreYOther = (otherPosition.top - otherPosition.height / 2) + (otherPosition.width / 2);
+        let centreXOther = (otherPosition.left - otherPosition.width / 2) + (otherPosition.height / 2);
+    
+        if (secConv.style.display === "none" && (centreY > centreYOther - 30 && centreY < centreYOther + 40) && (centreX > centreXOther - 50 && centreX < centreXOther + 30)) {
+    
+            secConv.style.display = "block";
+    
+        }
+        
+    });
+
+},1000);
 
 window.addEventListener("keydown", (event) => {
 
@@ -49,17 +73,17 @@ window.addEventListener("keydown", (event) => {
 
         case "ArrowLeft":
 
-            left -= 10;
+            gauche -= 10;
 
-            if(position.left < left){
+            if(position.left < gauche){
 
-                me.style.left = left + "px";
+                me.style.left = gauche + "px";
 
             }
             else{
 
-                left = position.left;
-                me.style.left = left + "px";
+                gauche = position.left;
+                me.style.left = gauche + "px";
 
             }
 
@@ -67,17 +91,17 @@ window.addEventListener("keydown", (event) => {
 
         case "ArrowRight":
 
-            left += 10;
+            gauche += 10;
 
-            if(position.right - me.getBoundingClientRect().width > left){
+            if(position.right - me.getBoundingClientRect().width > gauche){
 
-                me.style.left = left + "px";
+                me.style.left = gauche + "px";
 
             }
             else{
 
-                left = position.right - me.getBoundingClientRect().width;
-                me.style.left = left + "px";
+                gauche = position.right - me.getBoundingClientRect().width;
+                me.style.left = gauche + "px";
 
             }
 
@@ -85,5 +109,8 @@ window.addEventListener("keydown", (event) => {
         break;
 
     }
+
+    centreY = (haut - positionMe.height / 2) + (positionMe.width / 2);
+    centreX = (gauche + positionMe.width / 2) + (positionMe.height / 2);
 
 });
