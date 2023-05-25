@@ -1,11 +1,14 @@
 body{
+
     height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
+
 }
 
 #hubPage{
+
     width: 100%;
     height: 100%;
     background-image: url("../image/fond-hube.webp");
@@ -46,7 +49,6 @@ body{
     height: 768px;
     width: 1024px;
     background-color: gray;
-
 }
 
 #me {

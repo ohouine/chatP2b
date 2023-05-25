@@ -2,6 +2,8 @@ let formConnect = document.getElementById("connectForm")
 let usrName = document.getElementById("inptUsrName")
 let usrPwd = document.getElementById("inptUsrPwd")
 let pErr = document.getElementById("loginErr")
+let loginPa = document.getElementById("loginPage")
+let hubPa = document.getElementById("hubPage")
 
 var myHeader = new Headers();
 
@@ -35,6 +37,9 @@ formConnect.addEventListener("submit", (e) =>{
     }).then(function (jsonRep) {
         
         localStorage.setItem("token", jsonRep.data.token)
+        loginPa.style.display = "none"
+        hubPa.style.display = "block"
+
     }).catch((err) => {
         
         console.log(err)
