@@ -5,9 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     border-radius: 10px;
     display: none;
+    position: absolute;
+    top: 15%;
+    left: 30%;
 }
 
 #secConv h1{
@@ -35,4 +37,10 @@
     height: auto;
     padding: 0.2rem;
     border-radius: 10px;
+}
+
+#convBouton {
+
+    flex-direction: row;
+
 }
