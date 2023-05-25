@@ -33,19 +33,18 @@
                 </header>
     
                 <div id="connectMainDiv">
-                    <span class="error"><small></small></span>
+                    <span class="error" id="loginErr"><small></small></span>
                     <form action="#" method="post" id="connectForm">
                         <div>
                             <label for="user">Nom d'utilisateur</label>
-                            <span class="error"></span>
-                            <input type="text" name="user" id="user" value="">
+                            <input type="text" name="user" id="inptUsrName" value="">
                         </div>
     
                         <div>
                             <label for="password">Mot de passe</label>
-                            <span class="error"></span>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="inptUsrPwd">
                         </div>
+                        <button type="submit">se connecter</button>
                     </form>
                 </div> 
                    
@@ -72,6 +71,7 @@
     </section>
 
     <script src="./script/move.js"></script>
+    <script src="./script/connect.js"></script>
     <script src="./script/changePage.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/changeIMG.js"></script>
