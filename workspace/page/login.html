@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Connexion</title>
 </head>
 <body>
     
-<<<<<<< HEAD
     <main id="connect">
         <div id="divConnect">
             <header>
@@ -18,18 +17,16 @@
             </header>
 
             <div id="connectMainDiv">
-                <span class="error"><small></small></span>
+                <span class="error"><small id="loginErr"></small></span>
                 <form action="#" method="post" id="connectForm">
                     <div>
                         <label for="user">Nom d'utilisateur</label>
-                        <span class="error"></span>
-                        <input type="text" name="user" id="user" value="">
+                        <input type="text" name="user" id="inptUsrName" value="">
                     </div>
 
                     <div>
                         <label for="password">Mot de passe</label>
-                        <span class="error"></span>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="inptUsrPwd">
                     </div>
 
                     
@@ -43,7 +40,6 @@
                     </section>
 
                     <input type="submit" value="Se connecter">
-                    <a href="#" id="createLink">Crée un compte</a>
                 </form>
             </div> 
                
@@ -52,57 +48,10 @@
         
     </main>
 
-    <main id="Profile" style="display: none;">
-        <div id="divCreateAcc">
-            <header>
-                <div id="back"><a href="#"><img src="../image/flecheGriffeLong.png" alt="fleche de retour"></a></div>
-                <h1>Connexion</h1>
-            </header>
-            <form action="#" method="post" id="connectForm">
-                    
-                <span></span>
-                    
-                <div>
-                    <label for="user">Nom d'utilisateur <small>20 max</small></label>
-                    <span class="error"></span>
-                    <input type="text" name="user" id="user" value="">
-                </div>
 
-                <div>
-                    <label for="mail">E-mail</label>
-                    <span class="error"></span>
-                    <input type="mail" name="mail" id="mail" value="">
-                </div>
-
-
-                <div>
-                    <label for="password">Mot de passe</label>
-                    <span class="error"></span>
-                    <input type="password" name="password" id="password">
-                </div>
-
-                <div>
-                    <label for="secPassword">confirmé votre mot de passe</label>
-                    <span class="error"></span>
-                    <input type="password" name="secPassword" id="secPassword">
-                </div>
-
-                
-
-                <input type="submit" value="Cree un compte">
-
-
-                <a href="#" id="loginLink">j'ai dejas un compte</a>
-            </form>
-        </div>
-        
     </main>
     <script src="../script/changePage.js"></script>
-    <script src="../script/changeIMG.js"></script>
-=======
-    
-    <script src="./script/changePage.js"></script>
+    <script src="../script/connect.js"></script>
     <script src="./script/changeIMG.js"></script>
->>>>>>> 345aababca06ab110cba2055ffb5ec3a70398e75
 </body>
 </html>
