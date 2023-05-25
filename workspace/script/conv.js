@@ -1,5 +1,4 @@
 let allMess = document.querySelectorAll('p')
-console.log(allMess)
 for (let i = 0; i < allMess.length; i++) {
 
 

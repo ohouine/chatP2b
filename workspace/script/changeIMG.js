@@ -1,7 +1,7 @@
  //@ts-check
- let currentImg = document.getElementById('currentImg');
- let hiddenDiv = document.getElementById('hiddenImageDiv');
- let cross = document.getElementById('cross');
+ let currentImg = document.getElementById('currentImg')
+ let hiddenDiv = document.getElementById('hiddenImageDiv')
+ let cross = document.getElementById('cross')
  let lstImg = document.getElementsByClassName('selecImg')
  
  for (let i = 1; i <= 37; i++) {
