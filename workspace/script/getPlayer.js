@@ -1,3 +1,5 @@
+let position = hub.getBoundingClientRect()
+
 var myHeader = new Headers();
 
 var init = {
@@ -22,8 +24,8 @@ setInterval(async() => {
     for (let i = 0; i < data["data"].length; i++) {
         let e = data["data"][i]
         let img = document.getElementById(e["username"])
-        img.style.left = `${e["pos_x"]}px`
-        img.style.top = `${e["pos_y"]}px`
+        img.style.left = `${e["pos_x"] + position.left}px`
+        img.style.top = `${e["pos_y"] + position.top}px`
     }
 
 },500)
