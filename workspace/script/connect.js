@@ -37,6 +37,7 @@ formConnect.addEventListener("submit", (e) =>{
     }).then(function (jsonRep) {
         
         localStorage.setItem("token", jsonRep.data.token)
+        localStorage.setItem("name", jsonRep.data.username)
         loginPa.style.display = "none"
         hubPa.style.display = "block"
 
