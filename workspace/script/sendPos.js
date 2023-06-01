@@ -1,3 +1,4 @@
+let meme = document.getElementById("me")
 var init = {
     method : 'POST',
     headers : {
@@ -5,13 +6,14 @@ var init = {
     },
     cache : 'default',
     body : JSON.stringify( {
-        pos_x : 5,
-        pos_y : 5
+        pos_x : meme.getBoundingClientRect().top,
+        pos_y : meme.getBoundingClientRect().left
     })
 }
 
 setInterval(send,2000)
 
 async function send() {
-        await fetch(new URL("https://edu.pellaux.net/m294/chat-p2b/move.php?"),init)
+    const data = await fetch(new URL("https://edu.pellaux.net/m294/chat-p2b/move.php"),init)
+    console.log(data)
 }
