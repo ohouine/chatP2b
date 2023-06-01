@@ -1,5 +1,4 @@
 let me = document.getElementById("me")
-let other = document.querySelectorAll(".other")
 let hub = document.getElementById("hub")
 let secConv = document.getElementById("secConv")
 let convQuitte = document.getElementById("quitter")
@@ -17,6 +16,8 @@ let centreY = (haut - positionMe.height / 2) + (positionMe.width / 2)
 let centreX = (gauche + positionMe.width / 2) + (positionMe.height / 2)
 
 setInterval(() => {
+
+    let other = document.querySelectorAll(".other")
 
     other.forEach(element => {
 
