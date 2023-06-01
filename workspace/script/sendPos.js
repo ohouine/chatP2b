@@ -6,14 +6,13 @@ var init = {
     },
     cache : 'default',
     body : JSON.stringify( {
-        pos_x : meme.getBoundingClientRect().top,
-        pos_y : meme.getBoundingClientRect().left
+        pos_x : parseInt(meme.getBoundingClientRect().left),
+        pos_y : parseInt(meme.getBoundingClientRect().top)
     })
 }
 
-setInterval(send,2000)
-
 async function send() {
     const data = await fetch(new URL("https://edu.pellaux.net/m294/chat-p2b/move.php"),init)
-    console.log(data)
 }
+
+setInterval(send,2000)

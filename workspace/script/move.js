@@ -3,6 +3,7 @@ let other = document.querySelectorAll(".other")
 let hub = document.getElementById("hub")
 let secConv = document.getElementById("secConv")
 let convQuitte = document.getElementById("quitter")
+let convName = document.getElementById("convUserName")
 
 let conv = true
 
@@ -28,6 +29,8 @@ setInterval(() => {
     
             secConv.style.display = "flex"
 
+            convName.innerHTML = `User name : ${element.id}`
+
             conv = false
     
         }
@@ -46,7 +49,7 @@ convQuitte.addEventListener("click", event => {
 
         conv = true
 
-    },3000)
+    },2000)
 
 })
 
