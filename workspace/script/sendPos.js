@@ -1,4 +1,5 @@
 let meme = document.getElementById("me")
+let position = hub.getBoundingClientRect()
 var init = {
     method : 'POST',
     headers : {
@@ -6,8 +7,8 @@ var init = {
     },
     cache : 'default',
     body : JSON.stringify( {
-        pos_x : parseInt(meme.getBoundingClientRect().left),
-        pos_y : parseInt(meme.getBoundingClientRect().top)
+        pos_x : parseInt(meme.getBoundingClientRect().left - position.left),
+        pos_y : parseInt(meme.getBoundingClientRect().top - position.top)
     })
 }
 
