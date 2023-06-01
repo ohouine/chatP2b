@@ -1,4 +1,3 @@
-//@ts-check
 let meme = document.getElementById("me")
 
 let pos = hub.getBoundingClientRect()
@@ -19,8 +18,6 @@ async function send() {
 }
 
     const data = await fetch(new URL("https://edu.pellaux.net/m294/chat-p2b/move.php"),init)
-    console.log(meme.getBoundingClientRect().top - pos.top)
-    console.log(meme.getBoundingClientRect().left - pos.left)
 }
 
 setInterval(send,2000)

@@ -11,18 +11,22 @@ var init = {
 let data = await getPos()
 
 for (let i = 0; i < data["data"].length; i++) {
-    let img = document.createElement("img")
+    if (data["data"][i]["username"] != localStorage.getItem("name")) {
+        let img = document.createElement("img")
     img.src = "./image/4.png"
     img.className = "other"
     img.id = data["data"][i]["username"]
     img.style.position = "absolute"
     document.getElementById("hub").appendChild(img)
+    }
+    
 }
 
 setInterval(async() => {
     data = await getPos()
     for (let i = 0; i < data["data"].length; i++) {
-        let e = data["data"][i]
+        if (data["data"][i]["username"] != localStorage.getItem("name")) {
+         let e = data["data"][i]
         let img = document.getElementById(e["username"])
         if (e["pos_x"] + position.left > position.right){
 
@@ -44,6 +48,8 @@ setInterval(async() => {
             img.style.top = `${e["pos_y"] + position.top}px`
 
         }
+        }
+        
     }
 
 },500)

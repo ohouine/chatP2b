@@ -26,7 +26,7 @@ async function getPos() {
     data = await data.json()
 
     for (let i = 0; i < data["data"].length; i++) {
-        if (data["data"][i]["username"] == "dayan.mdx") {
+        if (data["data"][i]["username"] == localStorage.getItem("name")) {
             me.style.top =  `${data["data"][i]["pos_y"]}px`
             me.style.left =  `${data["data"][i]["pos_x"]}px`
         }
